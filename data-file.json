@@ -15,7 +15,7 @@
       "responses": [
         {
           "uuid": "ee121b83-d435-4b2d-9de6-a2bcd43f40e4",
-          "body": "{\r\n \"storeId\": \"7777\"\r\n}",
+          "body": "{\r\n \"storeId\": \"77779999\"\r\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
