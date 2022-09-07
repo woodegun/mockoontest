@@ -1,1 +1,132 @@
-{"openapi":"3.0.0","info":{"title":"Data file3","version":"1.0.0"},"servers":[{"url":"http://localhost:3001/"}],"paths":{"/service-point":{"post":{"description":"SPMS update-service-point","responses":{"200":{"description":"","content":{"application/json":{}},"headers":{}}}},"get":{"description":"SPMS get-service-point","responses":{"200":{"description":"","content":{"application/json":{}},"headers":{}}}}},"/stores":{"get":{"description":"EDMS get-stores","responses":{"200":{"description":"","content":{"application/json":{}},"headers":{}}}}}}}
+{
+  "uuid": "414ae504-eac2-4b8a-b7fd-f08dad978895",
+  "lastMigration": 22,
+  "name": "Data file3",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3001,
+  "hostname": "0.0.0.0",
+  "routes": [
+    {
+      "uuid": "ceddc3e9-216b-4d7c-b366-3a00ba06e101",
+      "documentation": "SPMS update-service-point",
+      "method": "post",
+      "endpoint": "service-point",
+      "responses": [
+        {
+          "uuid": "7ce968fd-f6a9-4fa3-9f97-7a455b2cdb6b",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "1df24cfb-5193-4c92-a23a-65353969461e",
+      "documentation": "SPMS get-service-point",
+      "method": "get",
+      "endpoint": "service-point",
+      "responses": [
+        {
+          "uuid": "27cf3e87-6fcc-4c12-abb4-bc3f78e7878a",
+          "body": "{\r\n    \"storeNumber\": 7777,\r\n    \"servicePoint\": [\r\n        {\r\n            \"Id\": 770000,\r\n        }\r\n    ]\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "cb96e1ad-4db1-4e08-8323-63db8a56401f",
+          "body": "{\r\n    \"storeNumber\": 1111,\r\n    \"server\": [\r\n        {\r\n            \"Id\": 700,\r\n            \"StoreNumber\": 7777,\r\n            \"ServicePointTypeId\": \"EA\",\r\n            \"SequenceNumber\": 1,\r\n            \"ServerTypeId\": \"14\",\r\n            \"PrintRollId\": 0,\r\n            \"Description\": \"Test_Server_updated\",\r\n            \"EndDateTime\": \"2020-08-31T12:00:00Z\"\r\n        }\r\n    ],\r\n    \"servicePoint\": [\r\n        {\r\n            \"Id\": 770000,\r\n            \"ServicePointNumber\": 31,\r\n            \"Serverid\": 700,\r\n            \"TypeHardwareClient\": \"MP\",\r\n            \"KindOfServicePointId\": \"W\",\r\n            \"ClientNumber\": 31,\r\n            \"SerialNumberClient\": \"Multipac\",\r\n            \"IndEftOnly\": true,\r\n            \"IndNoDrawer\": true,\r\n            \"IndNoEft\": true,\r\n            \"EndDateTime\": null,\r\n            \"SerialNumber\": \"1212121212\",\r\n            \"ReturnPinAllowed\": true,\r\n            \"UseSmartsafe\": false\r\n        }\r\n    ],\r\n    \"wagInServer\": [\r\n        {\r\n            \"Id\": 283,\r\n            \"ServerId\": 700,\r\n            \"WagId\": 3\r\n        }\r\n    ],\r\n    \"compactor\": [\r\n        {\r\n            \"Id\": 49,\r\n            \"StoreNumber\": 7777,\r\n            \"Name\": \"compactor\",\r\n            \"CompactorTypeId\": 3\r\n        }\r\n    ]\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "caf2bdba-9cd1-4ace-a60a-29571ea2e81c",
+      "documentation": "EDMS get-stores",
+      "method": "get",
+      "endpoint": "stores",
+      "responses": [
+        {
+          "uuid": "d12e6e99-3013-4f65-9983-003c4dd37439",
+          "body": "{\r\n \"storeId\": \"7777\"\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ]
+}
